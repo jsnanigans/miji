@@ -2,16 +2,22 @@
 <body>
 
 	<div mj-controller="demo">
-		<input type="text" mj-model="text">
-		<input type="text" mj-model="other">
+		<input type="text" mj-model="text" />
+		<input type="text" mj-model="other" />
 
-		<h2><span mj-html="text"></span></h2>
-		<h2><span mj-html="uppercased"></span></h2>
+		<h2>{{text}}</h2>
+		<h2>{{uppercased}}</h2>
 
 		<div mj-if="isDefault">
-			IS DEFAULT <span mj-html="other"></span>
+			IS
 		</div>
+
+		<span>{{text}} {{other}}</span>
 		<button mj-event="click.reset">Btn</button>
+<!--
+		<table>
+			<tr mj-for="name in list" mj-insert><td>Row ||index||</td> <td>||name||</td></tr>
+		</table> -->
 	</div>
 
   <script src="./index.js"></script>
