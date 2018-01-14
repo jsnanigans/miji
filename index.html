@@ -8,9 +8,8 @@
 		<h2>{{text}}</h2>
 		<h2>{{uppercased}}</h2>
 
-		<div mj-if="isDefault">
-			IS
-		</div>
+		<div mj-if="isDefault">IS</div>
+		<div mj-not="isDefault">NOT</div>
 
 		<span>{{text}} {{other}}</span>
 		<button mj-event="click.reset">Btn</button>
