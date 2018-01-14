@@ -4,7 +4,17 @@ const app = new miji()
 
 app.addController('demo', {
 	store: {
-		text: 'Default'
+		text: 'Default',
+		other: ''
+	},
+
+	computed: {
+		isDefault({store}) {
+			return store.text === 'Default'
+		},
+		uppercased({store}) {
+			return store.text ? store.text.toUpperCase() : ''
+		}
 	},
 
 	methods: {

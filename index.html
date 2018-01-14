@@ -3,7 +3,14 @@
 
 	<div mj-controller="demo">
 		<input type="text" mj-model="text">
+		<input type="text" mj-model="other">
+
 		<h2><span mj-html="text"></span></h2>
+		<h2><span mj-html="uppercased"></span></h2>
+
+		<div mj-if="isDefault">
+			IS DEFAULT <span mj-html="other"></span>
+		</div>
 		<button mj-event="click.reset">Btn</button>
 	</div>
 
